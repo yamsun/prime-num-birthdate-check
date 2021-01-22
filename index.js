@@ -30,6 +30,9 @@ if(checkValidDateMonth(date,month)){
 // processings
 
 function checkValidDateMonth(date,month){
+  if(typeof(date) !== Number || typeof (month) !== Number){
+    return false;
+  }
   if(month==2&&date>29){
     return false;
   }
